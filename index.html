@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UI Task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <header>
+                <div class="row-1">
+                    <div class="quant">
+                        <h1>Quant</h1>
+                        <div class="input-container">
+                            <div class="q-container">
+                                <div class="current-input">
+                                    <label for="quant">Current</label>
+                                    <div class="value">
+                                        <input id = "Q-current" />
+                                        <span class="error"></span>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="q-container">
+                                <label for="target">Target</label>
+                                <div class="value">
+                                    <input id = "Q-target" />
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="verbal">
+                        <h1>Verbal</h1>
+                        <div class="input-container">
+                            <div class="q-container">
+                                <label for="quant">Current</label>
+                                <div class="value">
+                                    <input id = "V-current" />
+                                    <span class="error"></span>
+                                </div>
+                            </div>
+    
+                            <div class="q-container">
+                                <label for="target">Target</label>
+                               <div class="value">
+                                <input id = "V-target" />
+                                <span class="error"></span>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button>submit and Refresh</button>
+            </header>
+        </div>
+    </div>
+    <section>
+        <div class="total">
+            <div class="total-wrapper">
+                <div class="total-score">
+                    <h1>Total Score</h1>
+                    <span class="total-num">620</span>
+                    <div class="total-bar bar-graph">
+                        <div class="total-target">
+                            <div class="tool-tip">
+                                <div class="total-target-num">720</div>
+                                <div class="tip"></div>
+                            </div>
+                        </div>
+                        <div class="total-bar-info info">+100</div>
+                        <div class="total-current">
+                            <div class="tool-tip">
+                                <div class="total-current-num">620</div>
+                                <div class="tip"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="total-msg">
+                        your estimation GMAT score per your performance in this mock test is <span class="total-num">620</span>, which is <span class="total-points-msg"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="children">
+            <div class="child-wrapper">
+                <div class="row">
+                    <h3>Quant score</h3>
+                    <span class="quant-num">Q42</span>
+                    <div class="quant-bar bar-graph">
+                        <div class="quant-target">
+                            <div class="tool-tip">
+                                <div class="quant-target-num">Q48</div>
+                                <div class="tip"></div>
+                            </div>
+                        </div>
+                        <div class="quant-bar-info info">+6</div>
+                        <div class="quant-current">
+                            <div class="tool-tip">
+                                <div class="quant-current-num">Q42</div>
+                                <div class="tip"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="quant-msg">
+                        your estimated quantitative score per your performance in this mock test is Q <span class="quant-points"></span>,which is <span class="quant-point-msg"></span>
+                    </p>
+                </div>
+                <div class="row">
+                    <h3>Verbal score</h3>
+                    <span class="verbal-num">V34</span>
+                    <div class="verbal-bar bar-graph">
+                        <div class="verbal-target">
+                            <div class="tool-tip">
+                                <div class="verbal-target-num">V34</div>
+                                <div class="tip"></div>
+                            </div>
+                        </div>
+                        <div class="verbal-bar-info info">+6</div>
+                        <div class="verbal-current">
+                            <div class="tool-tip">
+                                <div class="verbal-current-num">V41</div>
+                                <div class="tip"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="verbal-msg">
+                        your estimated quantitative score per your performance in this mock test is Q <span class="verbal-points"></span>,which is <span class="verbal-point-msg"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js" defer></script>
+</body>
+</html>
