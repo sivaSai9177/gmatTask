@@ -141,7 +141,7 @@ function init(){
        totalBarInfo.style.display = 'none';
         totalMsg.textContent = `your estimated GMAT score per your performance in this mock test is ${totalCNum},which is ${totalCNum - totalTNum} points higher than your target GMAT score of ${totalTNum}.`;
     }
-    if((totalNear <= 7 && totalNear > 0) || (totalNear >= -7 && totalNear <= -1)){
+    if((totalNear <= 10 && totalNear > 0) || (totalNear >= -10 && totalNear <= -1)){
         equal(totalToolTip,totalBarInfo);
         totalBarInfo.style.width = 'fit-content';
         totalBarInfo.style.marginLeft = totalTargetPercentage + '%';
