@@ -211,10 +211,10 @@ function clickFun(){
         total.style.animation = `anime 0.3s forwards cubic-bezier(0.61, 0.2, 0.94, 0.9)`;
         children.style.animation = `anime 0.3s 0.3s forwards cubic-bezier(0.61, 0.2, 0.94, 0.9)`;
         init();
-        quantCurrentInput.value = "";
-        quantTargetInput.value = "";
-        verbalCurrentInput.value = "";
-        verbalTargetInput.value = "";
+//         quantCurrentInput.value = "";
+//         quantTargetInput.value = "";
+//         verbalCurrentInput.value = "";
+//         verbalTargetInput.value = "";
 }
 
 function checking(){
