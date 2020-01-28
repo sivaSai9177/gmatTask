@@ -132,6 +132,7 @@ function init(){
     var verbalToolTip = verbalTarget.querySelector('.tool-tip');
     if(totalCurrentPercentage === totalTargetPercentage){
         equal(totalToolTip,totalBarInfo);
+        totalMsg.textContent = `your estimated GMAT score per your performance in this mock test is ${totalCNum},which is equal to your target GMAT score of ${totalTNum}.`;
     }else if(totalCurrentPercentage < totalTargetPercentage){
        removeEqual(totalToolTip,totalBarInfo);
         totalMsg.textContent = `your estimated GMAT score per your performance in this mock test is ${totalCNum},which is ${totalTNum - totalCNum} points lower than your target GMAT score of ${totalTNum}.`;
@@ -152,6 +153,7 @@ function init(){
     }
     if(quantCurrentPercentage === quantTargetPercentage){
         equal(quantToolTip,quantInfo);
+        quantMsg.textContent = `your estimated quantitative score per your performance in this mock test is Q${currentQuantScore},which is equal to your target GMAT score of Q${targetQuantScore}.`;
     }else if(quantCurrentPercentage < quantTargetPercentage){
        removeEqual(quantToolTip,quantInfo);
         quantMsg.textContent = `your estimated quantitative score per your performance in this mock test is Q${currentQuantScore},which is ${targetQuantScore - currentQuantScore} points lower than your target quantitative score of Q${targetQuantScore}.`
@@ -171,13 +173,14 @@ function init(){
     }
     if(verbalCurrentPercentage === verbalTargetPercentage){
         equal(verbalToolTip,verbalInfo);
+        quantMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is equal to your target quantitative score of V${targetVerbalScore}.`
     }else if(verbalCurrentPercentage < verbalTargetPercentage){
         removeEqual(verbalToolTip,verbalInfo);
-        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${targetVerbalScore - currentVerbalScore} points lower than ypur target quantitative score of Q${targetVerbalScore}.`
+        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${targetVerbalScore - currentVerbalScore} points lower than ypur target quantitative score of V${targetVerbalScore}.`
     }else if(verbalCurrentPercentage > verbalTargetPercentage){
         removeEqual(verbalToolTip,verbalInfo);
         verbalInfo.style.display = 'none';
-        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${currentVerbalScore - targetVerbalScore} points higher than ypur target quantitative score of Q${targetVerbalScore}.`
+        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${currentVerbalScore - targetVerbalScore} points higher than ypur target quantitative score of V${targetVerbalScore}.`
     }
     if((verbalNear <= 7 && verbalNear > 0) || (verbalNear >=-7 && verbalNear <= -1)){
         equal(verbalToolTip,verbalInfo);
