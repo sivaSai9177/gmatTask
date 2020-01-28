@@ -173,7 +173,7 @@ function init(){
     }
     if(verbalCurrentPercentage === verbalTargetPercentage){
         equal(verbalToolTip,verbalInfo);
-        quantMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is equal to your target quantitative score of V${targetVerbalScore}.`
+        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is equal to your target quantitative score of V${targetVerbalScore}.`
     }else if(verbalCurrentPercentage < verbalTargetPercentage){
         removeEqual(verbalToolTip,verbalInfo);
         verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${targetVerbalScore - currentVerbalScore} points lower than ypur target quantitative score of V${targetVerbalScore}.`
