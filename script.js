@@ -230,12 +230,6 @@ function checking(){
     else{
         btn.classList.add('submit');
         btn.addEventListener('click',clickFun,false);
-        window.addEventListener('keydown',(e)=>{
-            if(e.key === "Enter"){
-               e.preventDefault();
-                clickFun();
-            }
-        })
     }
 }
 
