@@ -132,7 +132,6 @@ function init(){
     var verbalToolTip = verbalTarget.querySelector('.tool-tip');
     if(totalCurrentPercentage === totalTargetPercentage){
         equal(totalToolTip,totalBarInfo);
-        totalMsg.textContent = `your estimated GMAT score per your performance in this mock test is ${totalCNum},which is equal to your target GMAT score of ${totalTNum}.`;
     }else if(totalCurrentPercentage < totalTargetPercentage){
        removeEqual(totalToolTip,totalBarInfo);
         totalMsg.textContent = `your estimated GMAT score per your performance in this mock test is ${totalCNum},which is ${totalTNum - totalCNum} points lower than your target GMAT score of ${totalTNum}.`;
@@ -153,7 +152,6 @@ function init(){
     }
     if(quantCurrentPercentage === quantTargetPercentage){
         equal(quantToolTip,quantInfo);
-        quantMsg.textContent = `your estimated quantitative score per your performance in this mock test is Q${currentQuantScore},which is equal to your target GMAT score of Q${targetQuantScore}.`;
     }else if(quantCurrentPercentage < quantTargetPercentage){
        removeEqual(quantToolTip,quantInfo);
         quantMsg.textContent = `your estimated quantitative score per your performance in this mock test is Q${currentQuantScore},which is ${targetQuantScore - currentQuantScore} points lower than your target quantitative score of Q${targetQuantScore}.`
@@ -173,14 +171,13 @@ function init(){
     }
     if(verbalCurrentPercentage === verbalTargetPercentage){
         equal(verbalToolTip,verbalInfo);
-        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is equal to your target quantitative score of V${targetVerbalScore}.`
     }else if(verbalCurrentPercentage < verbalTargetPercentage){
         removeEqual(verbalToolTip,verbalInfo);
-        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${targetVerbalScore - currentVerbalScore} points lower than ypur target quantitative score of V${targetVerbalScore}.`
+        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${targetVerbalScore - currentVerbalScore} points lower than ypur target quantitative score of Q${targetVerbalScore}.`
     }else if(verbalCurrentPercentage > verbalTargetPercentage){
         removeEqual(verbalToolTip,verbalInfo);
         verbalInfo.style.display = 'none';
-        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${currentVerbalScore - targetVerbalScore} points higher than ypur target quantitative score of V${targetVerbalScore}.`
+        verbalMsg.textContent = `your estimated quantitative score per your performance in this mock test is V${currentVerbalScore},which is ${currentVerbalScore - targetVerbalScore} points higher than ypur target quantitative score of Q${targetVerbalScore}.`
     }
     if((verbalNear <= 7 && verbalNear > 0) || (verbalNear >=-7 && verbalNear <= -1)){
         equal(verbalToolTip,verbalInfo);
@@ -211,10 +208,10 @@ function clickFun(){
         total.style.animation = `anime 0.3s forwards cubic-bezier(0.61, 0.2, 0.94, 0.9)`;
         children.style.animation = `anime 0.3s 0.3s forwards cubic-bezier(0.61, 0.2, 0.94, 0.9)`;
         init();
-//         quantCurrentInput.value = "";
-//         quantTargetInput.value = "";
-//         verbalCurrentInput.value = "";
-//         verbalTargetInput.value = "";
+        // quantCurrentInput.value = "";
+        // quantTargetInput.value = "";
+        // verbalCurrentInput.value = "";
+        // verbalTargetInput.value = "";
 }
 
 function checking(){
@@ -233,14 +230,17 @@ function checking(){
     else{
         btn.classList.add('submit');
         btn.addEventListener('click',clickFun,false);
+        window.addEventListener('keydown',enter,false);
+    }
+}
+
+function enter(e){
+    if(e.keyCode === 13){
+        clickFun();
     }
 }
 
 // inputs[3].addEventListener('input',()=>{
 //     checking();
 // })
-
-
-
-
 
